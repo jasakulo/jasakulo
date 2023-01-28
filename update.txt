@@ -1,0 +1,11 @@
+update terbaru
+git add .
+git commit -m 'update fitur terbaru'
+git push -u origin main
+
+update css perkecil size
+npx tailwindcss -i ./src/output.css -o ./dist/css/final.css --minify
+
+login terminal
+git config --global user.email "jasakuloapp@gmail.com"
+git config --global user.name "jasakulo"
