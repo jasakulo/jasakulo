@@ -551,14 +551,6 @@ video {
   }
 }
 
-.pointer-events-none {
-  pointer-events: none;
-}
-
-.pointer-events-auto {
-  pointer-events: auto;
-}
-
 .fixed {
   position: fixed;
 }
@@ -742,10 +734,6 @@ video {
   width: 2.5rem;
 }
 
-.w-5 {
-  width: 1.25rem;
-}
-
 .max-w-\[120px\] {
   max-width: 120px;
 }
@@ -775,6 +763,16 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -793,10 +791,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.place-self-auto {
-  place-self: auto;
 }
 
 .self-end {
@@ -835,10 +829,6 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-none {
-  border-radius: 0px;
 }
 
 .border {
@@ -1000,10 +990,6 @@ video {
   text-align: center;
 }
 
-.text-right {
-  text-align: right;
-}
-
 .text-justify {
   text-align: justify;
 }
@@ -1097,11 +1083,6 @@ video {
 .text-pink-500 {
   --tw-text-opacity: 1;
   color: rgb(236 72 153 / var(--tw-text-opacity));
-}
-
-.text-slate-400 {
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
 .opacity-60 {
@@ -1209,6 +1190,17 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.top-line {
+  display: block;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.dark .top-line {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1256,10 +1248,6 @@ body {
 .hover\:grayscale-0:hover {
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.focus\:pointer-events-auto:focus {
-  pointer-events: auto;
 }
 
 .focus\:border-primary:focus {
@@ -1319,10 +1307,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:pointer-events-auto {
-    pointer-events: auto;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -1452,4 +1436,3 @@ body {
   }
 }
 
-  
