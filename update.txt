@@ -9,3 +9,7 @@ npx tailwindcss -i ./src/output.css -o ./dist/css/final.css --minify
 login terminal
 git config --global user.email "jasakuloapp@gmail.com"
 git config --global user.name "jasakulo"
+
+JALANKAN TERMINAL
+
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch

@@ -31,4 +31,7 @@ body {
     @apply translate-x-3;
 }
 
-  
+.top-line {
+    @apply block bg-dark dark:bg-white;
+}
+
