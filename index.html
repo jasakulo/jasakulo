@@ -139,7 +139,7 @@
 <!--About Section start-->
 <section id="about" class="pt-36 pb-16 dark:bg-dark">
     <div class="container" data-aos="fade-up" data-aos-duration="1000">
-        <h4 class="w-full px-4 mb-2 font-bold text-3xl appearance text-primary text-lg ">TENTANG JASAKULO</h4>
+        <h4 class="w-full px-4 mb-2 font-bold text-2xl appearance text-primary text-lg ">TENTANG JASAKULO</h4>
         <div class="flex flex-wrap" data-aos="fade-up" data-aos-duration="1000">
             <div class="w-full px-4 mb-10 lg:w-1/2">
                 <h2 class="font-bold text-dark text-3xl mb-4 mx-w-md lg:text-4xl dark:text-white">Mengenal Jasakulo ?</h2>
@@ -458,51 +458,82 @@ mb-3 dark:text-white">PayLater</h3>
     <!-- blog section And -->
 
     <!-- Contact section Start -->
-    <section id="contact" class="pt-36 pb-16 dark:bg-slate-800">
-        <div class="container">
-            <div class="w-full px-4"class="fill-current" >
-                <div class="max-w-xl mx-auto text-center mb-16">
+    <section id="contact" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
+            <div class="container">
+                <div class="w-full px-4" class="fill-current" >
+                    <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2" data-aos="fade-up" data-aos-duration="1000">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:xt-4xl lg:text-5xl dark:text-white" data-aos="fade-up" data-aos-duration="1000">Hubungi Kami</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Saran dan kritik anda sangat membangun jasakulo untuk lebih baik lagi dalam menyediakan fitur-fitur dan jasa yang profesional,untuk mencapai impian anda dalam satu genggaman.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:xt-4xl lg:text-5xl dark:text-white" data-aos="fade-up" data-aos-duration="2000">Hubungi Kami</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="3000">Saran dan kritik anda sangat membangun jasakulo untuk lebih baik 
+                        lagi dalam menyediakan fitur-fitur dan jasa yang profesional,untuk mencapai impian anda dalam satu genggaman.</p>
                 </div>
             </div>
-            
-            <form name="submit-to-google-sheet">
-                <div class="w-full lg:w-2/3 lg:mx-auto">
-            <div class="w-full px-4 mb-8">
-               <label for="name" class="text-base font-bold 
-               text-primary">Nama</label>
-               <input type="text" id="name" name="nama" class="w-full bg-slate-200
-               text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>
-            </div>
-            <div class="w-full px-4 mb-8">
-                <label for="email" class="text-base font-bold 
-                text-primary">Email</label>
-                <input type="email" id="email" name="email" class="w-full bg-slate-200
-                text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>
-             </div>
-            <div class="w-full px-4 mb-8">
-                <label for="pesan" class="text-base font-bold 
-                text-primary">Pesan</label>
-                <input type="pesan" id="pesan" name="pesan" class="w-full bg-slate-200
-                text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"/>
-            </textarea>
-             </div>
-             
-               <button type="submit" class="text-base btn btn-primary btn-kirim font-semibold text-white
-               bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 
-               hover:shadow-lg transition duration-500">Kirim</button>
+            <div class="w-full lg:w-2/3 lg:mx-auto shadow-md animate-pulse bg-teal-400 border-primary text-primary px-4 py-3 
+            rounded relative hidden" role="alert" data-aos="fade-up" data-aos-duration="1000">
+                <strong class="font-bold">Terima Kasih!</strong>
+                <span class="block sm:inline">Pesan Anda sudah Kami Terima.</span>
+                <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                  <svg class="fill-current h-6 w-6 text-primary" role="button" xmlns="./dist/img/icon/alert.svg"
+                  viewBox="0 0 20 20"><title>Close</title>
+                  <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                </span>
+              </div>
+                <form name="submit-to-google-sheet" >
+                    <!-- menyesuaikan form responsip-->
+                    <div class="w-full lg:w-2/3 lg:mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="w-full px-4 mb-8">
+                   <label for="name" class="text-base font-bold 
+                   text-primary">Nama Lengkap</label>
+                   <input type="text" id="name" name="nama" class="w-full bg-slate-200
+                   text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>
+                </div>
+                <div class="w-full px-4 mb-8">
+                    <label for="email" class="text-base font-bold 
+                    text-primary">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-slate-200
+                    text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>
+                 </div>
+                <div class="w-full px-4 mb-8">
+                    <label for="pesan" class="text-base font-bold 
+                    text-primary">Pesan</label>
+                    <textarea type="pesan" id="pesan" name="pesan" class="w-full bg-slate-200
+                    text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32">
+                </textarea>
+                 </div>
+                 <div class="w-full px-4 mb-8">
+                   <button type="submit" class="btn btn-primary btn-kirim text-base font-semibold text-white
+                   bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 
+                   hover:shadow-lg transition duration-500">Kirim</button>
 
-             </div>
+                   <button type="button" class="btn btn-primary btn-loading hidden text-base font-semibold text-white
+                   bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 
+                   hover:shadow-lg transition duration-500" disabled>
+                    <svg class="animate-ping h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+                      <!-- ... -->
+                    </svg>
+                    Processing...
+                  </button>
+                </div> 
+                 </div>
+            </form>
+            <!-- maps -->
+            <div class="w-full lg:w-2/3 lg:mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="text-decoration:none; overflow:hidden;max-width:100%;width:1000px;height:300px;">
+                        <div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" 
+                        src="https://www.google.com/maps/embed/v1/directions?origin=JASAKULO,+Ngesti+Rahayu,+Central+Lampung+Regency,+Lampung,+Indonesia&destination=JASAKULO,+Ngesti+Rahayu,+Central+Lampung+Regency,+Lampung,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                    </div>
+                <div class="col-lg-6"> </div>
             </div>
-        </form>
-
+    </div>   
         </div>
-
+    </div>
     </section>
     <!-- Contact section And -->
-
     <!-- footer Start -->
     <footer class="bg-dark pt-24 pb-12">
         <div class="container">
@@ -653,11 +684,25 @@ mb-3 dark:text-white">PayLater</h3>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx-FG0cQryzeyx6dUov0MykKeEOa1RaV8hTRbTgVYy5juBcIQqvg0WS0Nfcd1el043x/exec'
     const form = document.forms['submit-to-google-sheet']
-  
+    const btnKirim =document.querySelector('btn-kirim');
+    const btnLoading =document.querySelector('btn-loading');
+    const alert =document.querySelector('alert');
     form.addEventListener('submit', e => {
-      e.preventDefault()
+      e.preventDefault();
+      //tampilkan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle('hidden');
+      btnKirim.classList.toggle('hidden');
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            //tampilkan tombol Kirim, hilangkan tombol Loading
+            btnLoading.classList.toggle('hidden');
+      btnKirim.classList.toggle('hidden');
+      //tampilkan alert
+      alert.classList.toggle('hidden');
+       
+        form.reset();
+        console.log('Success!', response);
+    })
         .catch(error => console.error('Error!', error.message))
     })
   </script>
