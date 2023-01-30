@@ -14,8 +14,6 @@ window.onscroll = function(){
     totop.classList.add('hidden');
     }
 }
-
-
 // Hamberger
 const hamberger = document.querySelector('#hamberger');
 const navmenu = document.querySelector('#nav-menu');
@@ -56,4 +54,4 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
     darktoggle.checked =false;
   }
 
-  //tombol whatsapp
+  
