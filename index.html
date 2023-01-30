@@ -146,7 +146,7 @@
                 <P class="font-medium text-base text-secondary mx-w-xl lg:text-lg text-justify">Sebuah Platform jasa yang menghubungkan pekerja konstruksi dengan banyak pelanggan sesuai kebutuhan. Jasakulo dilatarbelakangi dengan impian membukan lapangan pekerjaan bagi para pekerja konstruksi di seluruh Indonesia dengan lebih praktis dan flexible. Berkembang dalam bidang jasa konstruksi, jasakulo memberikan kemudahan-kemudahan untuk mewujudkan impian memiliki Rumah atau bangunan idaman dengan budget minimum. Selain berkembang dalam bidang jasa konstruksi, jasakulo juga menyediakan platform belanja, untuk memenuhi kebutuhan material bangunan dengan penawaran harga yang lebih terjangkau.</P>
             </div>
             <div class="w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="font-bold text-dark text-3xl mb-4 mx-w-md lg:text-4xl dark:text-white">Bergabung Dengan Kami !</h2>
+                <h2 class="font-bold text-dark text-3xl mb-4 mx-w-md lg:text-4xl dark:text-white">Bergabung dengan Kami !</h2>
                     <p class="font-medium text-base text-secondary mb-6 lg:text-lg text-justify" >Satu-satunya platform yang menyediakan barang dan jasa dalam satu aplikasi dengan lebih praktis dan flexible. Satu genggaman mewujudkan anda memiliki gedung/bangunan impian.
                     </p>
                     <h2 class="font-semibold text-dark text-xl mb-4 mx-w-md lg:text-2xl dark:text-white">Sosial Media</h2>
@@ -467,6 +467,7 @@ mb-3 dark:text-white">PayLater</h3>
                     <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Saran dan kritik anda sangat membangun jasakulo untuk lebih baik lagi dalam menyediakan fitur-fitur dan jasa yang profesional,untuk mencapai impian anda dalam satu genggaman.</p>
                 </div>
             </div>
+            
             <form name="submit-to-google-sheet">
                 <div class="w-full lg:w-2/3 lg:mx-auto">
             <div class="w-full px-4 mb-8">
@@ -488,7 +489,8 @@ mb-3 dark:text-white">PayLater</h3>
                 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"/>
             </textarea>
              </div>
-               <button type="submit" class="text-base d-none btn btn-primary btn-kirim font-semibold text-white
+             
+               <button type="submit" class="text-base btn btn-primary btn-kirim font-semibold text-white
                bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 
                hover:shadow-lg transition duration-500">Kirim</button>
 
@@ -651,27 +653,11 @@ mb-3 dark:text-white">PayLater</h3>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx-FG0cQryzeyx6dUov0MykKeEOa1RaV8hTRbTgVYy5juBcIQqvg0WS0Nfcd1el043x/exec'
     const form = document.forms['submit-to-google-sheet']
-    const btnKirim = ducument.querrySelector('.btn-kirim');
-    
-
+  
     form.addEventListener('submit', e => {
       e.preventDefault()
-      //ketika tombol submit diklik
-      // tampilkan tombol loading,hilangkan tombol kirim
-      btnKirim.classList.toggle('d-none');
-      btnKirim.classList.toggle('d-none');
-      
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            // tampilkan tombol kirim,hilangkan tombol loading
-            btnKirim.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            //tampilkan elert 
-            //myAlert.classList.toggle('d-none');
-            //reset formnya
-            form.reset('');
-        console.log('Success!', response)
-    })
+        .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
   </script>
