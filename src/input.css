@@ -3,76 +3,104 @@
 @tailwind utilities;
 
 body {
-    font-family: 'inter' sans-serif;
+  font-family: "inter" sans-serif;
 }
 
 .navbar-fixed {
-    @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .hamberger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
 }
 
 .hamberger-active > span:nth-child(1) {
-    @apply   rotate-45 transition;
+  @apply rotate-45 transition;
 }
 
 .hamberger-active > span:nth-child(2) {
-    @apply  scale-0;
+  @apply scale-0;
 }
 
 .hamberger-active > span:nth-child(3) {
-    @apply  -rotate-45;
+  @apply -rotate-45;
 }
 
 #dark-toggle:checked ~ label div.toggle-circle {
-    @apply translate-x-3;
+  @apply translate-x-3;
 }
 
 .top-line {
-    @apply block bg-dark dark:bg-white;
+  @apply block bg-dark dark:bg-white;
 }
 
-animate-none	animation: none;
-animate-spin	animation: spin 1s linear infinite;
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* contact sedtion */
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  flex-wrap: wrap;
+}
+.contact .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding-top: 5rem 2 rem;
+  text-align: center;
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
   }
 }
-animate-ping	animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
 }
-animate-pulse	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
+.contact .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  object-fit: cover;
 }
-animate-bounce	animation: bounce 1s infinite;
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+}
+.contact .row form .btn,
+footer {
+  background-color: var(--primary);
 }

@@ -1,3 +1,4 @@
+
 update terbaru
 git add .
 git commit -m 'update fitur terbaru'
@@ -11,5 +12,14 @@ git config --global user.email "jasakuloapp@gmail.com"
 git config --global user.name "jasakulo"
 
 JALANKAN TERMINAL
+install npm
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+input.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
